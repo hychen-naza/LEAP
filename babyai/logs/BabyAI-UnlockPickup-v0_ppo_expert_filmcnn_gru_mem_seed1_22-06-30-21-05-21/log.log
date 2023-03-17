@@ -1,0 +1,82 @@
+__main__: 2022-06-30 21:05:24,526: LAST COMMIT INFO:
+__main__: 2022-06-30 21:05:24,526: commit 2152dd6479d8725f52ae8c48495bd14621389cbe
+Merge: 9d7416d bb20d5e
+Author: Dzmitry Bahdanau <dimabgv@gmail.com>
+Date:   Fri Nov 22 14:20:09 2019 -0500
+
+    Merge pull request #72 from mila-iqia/dima-iclr19-dev
+    
+    WIP: experiment instructions
+
+__main__: 2022-06-30 21:05:24,581: GIT DIFF:
+__main__: 2022-06-30 21:05:24,582: diff --git a/babyai/minigrid/minigrid.py b/babyai/minigrid/minigrid.py
+index 2f82f1e..8b1ef80 100644
+--- a/babyai/minigrid/minigrid.py
++++ b/babyai/minigrid/minigrid.py
+@@ -1162,7 +1162,10 @@ class MiniGridEnv(gym.Env):
+         This method also outputs a visibility mask telling us which grid
+         cells the agent can actually see.
+         """
+-
++        import copy
++        grid = self.grid.slice(0, 0, self.grid.width, self.grid.height)
++        vis_mask = None
++        '''
+         topX, topY, botX, botY = self.get_view_exts()
+ 
+         grid = self.grid.slice(topX, topY, AGENT_VIEW_SIZE, AGENT_VIEW_SIZE)
+@@ -1185,7 +1188,7 @@ class MiniGridEnv(gym.Env):
+             grid.set(*agent_pos, self.carrying)
+         else:
+             grid.set(*agent_pos, None)
+-
++        '''
+         return grid, vis_mask
+ 
+     def gen_obs(self):
+
+__main__: 2022-06-30 21:05:24,582: COMMAND LINE ARGS:
+__main__: 2022-06-30 21:05:24,582: Namespace(algo='ppo', arch='expert_filmcnn', batch_size=1280, beta1=0.9, beta2=0.999, clip_eps=0.2, discount=0.99, entropy_coef=0.01, env='BabyAI-UnlockPickup-v0', epochs=1000000, frames=90000000000, frames_per_proc=40, gae_lambda=0.99, image_dim=128, instr_arch='gru', instr_dim=128, log_interval=10, lr=0.0001, max_grad_norm=0.5, memory_dim=128, model='BabyAI-UnlockPickup-v0_ppo_expert_filmcnn_gru_mem_seed1_22-06-30-21-05-21', no_instr=False, no_mem=False, optim_alpha=0.99, optim_eps=1e-05, patience=100, ppo_epochs=4, pretrained_model=None, procs=64, recurrence=20, reward_scale=20.0, save_interval=1000, seed=1, task_id_seed=False, tb=False, val_episodes=500, val_interval=1, val_seed=1000000000, value_loss_coef=0.5)
+__main__: 2022-06-30 21:05:24,582: CUDA available: True
+__main__: 2022-06-30 21:05:24,582: ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(2, 2), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=(2, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU()
+    (7): MaxPool2d(kernel_size=(2, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (film_pool): MaxPool2d(kernel_size=(2, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+  (word_embedding): Embedding(100, 128)
+  (instr_rnn): GRU(128, 128, batch_first=True)
+  (memory_rnn): LSTMCell(128, 128)
+  (FiLM_Controler_0): ExpertControllerFiLM(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (weight): Linear(in_features=128, out_features=128, bias=True)
+    (bias): Linear(in_features=128, out_features=128, bias=True)
+  )
+  (FiLM_Controler_1): ExpertControllerFiLM(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (weight): Linear(in_features=128, out_features=128, bias=True)
+    (bias): Linear(in_features=128, out_features=128, bias=True)
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
