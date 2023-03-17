@@ -18,7 +18,7 @@ Please cite our paper as:
 ```
 
 ## Introduction
-In this repo, we provide training and evaluation code for Mu<em>l</em>tistep <em>E</em>nergy-Minimiz<em>a</em>tion <em>P</em>lanner (LEAP) model in Babyai environment.
+In this repo, we provide training and evaluation code for Mu<strong>l</strong>tistep <strong>E</strong>nergy-Minimiz<strong>a</strong>tion <strong>P</strong>lanner (LEAP) model in Babyai environment.
 
 
 ## Install
