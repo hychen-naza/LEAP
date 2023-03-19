@@ -4,8 +4,7 @@ Hongyi Chen\*, Yilun Du\*, Yiye Chen\*, Joshua B. Tenenbaum, Patricio A. Vela
 
 \*equal contribution
 
-A link to our paper can be found on [OpenReview]([https://arxiv.org/abs/2106.01345](https://openreview.net/forum?id=cVFD6qE8gnY)).
-
+A link to our paper can be found on [OpenReview](https://openreview.net/forum?id=cVFD6qE8gnY).
 
 Please cite our paper as:
 
