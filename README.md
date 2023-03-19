@@ -5,6 +5,7 @@ Hongyi Chen\*, Yilun Du\*, Yiye Chen\*, Joshua B. Tenenbaum, Patricio A. Vela
 \*equal contribution
 
 A link to our paper can be found on [OpenReview](https://openreview.net/forum?id=cVFD6qE8gnY).
+A link to our project website can be found on [here](https://hychen-naza.github.io/projects/LEAP/index.html).
 
 Please cite our paper as:
 
