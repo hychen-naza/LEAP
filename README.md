@@ -12,7 +12,7 @@ Please cite our paper as:
 ```
 @inproceedings{chenplanning,
   title={Planning with Sequence Models through Iterative Energy Minimization},
-  author={Chen, Hongyi and Du, Yilun and Chen, Yiye and Vela, Patricio A and Tenenbaum, Joshua B},
+  author={Chen, Hongyi and Du, Yilun and Chen, Yiye and Tenenbaum, Joshua B and Vela, Patricio A},
   booktitle={International Conference on Learning Representations}
 }
 ```
