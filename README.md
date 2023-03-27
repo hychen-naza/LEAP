@@ -11,7 +11,7 @@ Please cite our paper as:
 
 ```
 @inproceedings{chenplanning,
-  title={Planning with Language Models through Iterative Energy Minimization},
+  title={Planning with Sequence Models through Iterative Energy Minimization},
   author={Chen, Hongyi and Du, Yilun and Chen, Yiye and Vela, Patricio A and Tenenbaum, Joshua B},
   booktitle={International Conference on Learning Representations}
 }
