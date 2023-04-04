@@ -29,7 +29,7 @@ Babyai simulator
 cd babyai
 pip3 install --editable .
 ```
-LEAP training and testing in our environment
+LEAP training and testing in our environment (should be good in other close version)
 ```
 python=3.7.12
 pytorch=1.11.0+cu113
