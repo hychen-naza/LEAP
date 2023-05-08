@@ -10,14 +10,11 @@ A link to our project website can be found on [here](https://hychen-naza.github.
 Please cite our paper as:
 
 ```
-@article{chen2021safe,
-  title={Safe and sample-efficient reinforcement learning for clustered dynamic environments},
-  author={Chen, Hongyi and Liu, Changliu},
-  journal={IEEE Control Systems Letters},
-  volume={6},
-  pages={1928--1933},
-  year={2021},
-  publisher={IEEE}
+@inproceedings{chenplanning,
+  title={Planning with Sequence Models through Iterative Energy Minimization},
+  author={Chen, Hongyi and Du, Yilun and Chen, Yiye and Tenenbaum, Joshua B and Vela, Patricio A},
+  booktitle={International Conference on Learning Representations},
+  year={2023}
 }
 ```
 
