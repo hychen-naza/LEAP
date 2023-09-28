@@ -43,7 +43,7 @@ bash test_run.sh
 
 # Contact
 
-In case of any confusion, please email hchen657@gatech.edu.
+In case of any confusion, please email hongyic@andrew.cmu.edu.
 
 # Acknowledgements
 
